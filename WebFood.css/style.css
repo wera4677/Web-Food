@@ -7,15 +7,15 @@ a {
   text-decoration: none;
 }
 #main-header {
-  height: 80px;
+  height: 5rem;
   display: flex; /*움직일수있게박스설정*/
   justify-content: space-between; /*공간확보*/
   align-items: center; /*교차축 같은위치지정*/
   background-color: rgb(29, 26, 24);
-  padding: 0 20px;
+  padding: 0 5%;
 }
 #logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: rgb(238, 164, 80);
   text-transform: uppercase;
@@ -27,11 +27,11 @@ a {
   padding: 0;
 }
 #main-header li {
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 #main-header nav a {
   color: rgb(185, 131, 41);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 #main-header nav a:hover {
   color: rgb(228, 163, 44);
@@ -39,18 +39,19 @@ a {
 main h1 {
   text-align: center;
   color: rgb(238, 164, 80);
-  font-size: 48px;
+  font-size: 3rem;
 }
 #latest-products {
   width: 80%;
-  margin: 50px auto;
+  margin: 2rem auto;
 }
 #latest-products ul {
   display: grid; /*그리드*/
   grid-template-columns: 1fr 1fr; /*각각의 열에 비율지정*/
-  gap: 16px; /*그리드열에 간격추가*/
+  gap: 1rem; /*그리드열에 간격추가*/
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .food-item {
   background-color: rgb(228, 206, 182);
@@ -58,25 +59,26 @@ main h1 {
   overflow: hidden; /*한면만 둥글해졌을때 양면 전부 고치는명령어*/
 }
 .food-item img {
-  height: 240px;
+  height: 15rem;
   width: 100%;
   object-fit: cover; /*크기와 넓비를 맞추기*/
 }
 .food-item-content {
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
 }
-h2 {
+
   /* font-size: 200%;폰트사이즈는 부모폰트사이즈를 따라간다 */
   /* font-size: 2em; 1em == 100% 와 같다  */
   /* font-size: 2rem; rem은 HTML요소에 맞춰서 사이즈 변경 */
-  /*-rem :만약 HTML요소의 사이즈가 설정안된경우 페이지의 폰트사이즈를 따라간다*/
-}
+  /*-rem :만약 HTML요소의 폰트사이즈가 설정안된경우 페이지의 "폰트사이즈"를 따라간다*/
+  /* font-size: 2rem;em과rem은 부모 또는 최상위요소의 폰트사이즈를 따라감 */
+
 .btn {
   background-color: rgb(228, 157, 44);
   color: white;
   border-radius: 4px;
-  padding: 8px 24px;
+  padding: 0.5rem 1.5rem;
 }
 .btn:hover {
   background-color: rgb(221, 134, 34);
