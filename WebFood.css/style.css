@@ -1,0 +1,160 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: rgb(44, 41, 38);
+}
+a {
+  text-decoration: none;
+}
+#main-header {
+  height: 5rem;
+  display: flex; /*움직일수있게박스설정*/
+  justify-content: space-between; /*공간확보*/
+  align-items: center; /*교차축 같은위치지정*/
+  background-color: rgb(29, 26, 24);
+  padding: 0 5%;
+}
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(238, 164, 80);
+  text-transform: uppercase;
+}
+.menu-btn {/*햄버거 바*/
+  width: 3rem;
+  height: 3em;
+  display: flex;
+  flex-direction: column; /*밑방향으로 정의한다*/
+  justify-content: space-around;/*밑으로 공간확보*/
+  display: none;
+}
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+  background-color:white;
+}
+
+#main-header ul {
+  list-style: none; /*링크 밑줄 없게하기*/
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+#main-header li {
+  margin: 0 1rem;
+}
+#main-header nav a {
+  color: rgb(185, 131, 41);
+  font-size: 1.25rem;
+}
+#main-header nav a:hover {
+  color: rgb(228, 163, 44);
+}
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29,26,27);
+  position: fixed; /*위치결정,이미지 공간생성x*/
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  height: 5rem;
+  display: flex; /*움직일수있게박스설정*/
+  justify-content: flex-end; /*공간 끝에 위치*/
+  align-items: center; /*교차축 같은위치지정*/
+  padding: 0 5%;
+}
+#side-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 4rem 1rem;
+  display: flex;/*플렉스박스로만들어 움직일수있게함,중심으로맞춤*/
+  flex-direction: column;/*밑으로 행만들기*/
+  /* justify-content: center;플렉스박스 공간 확보 */
+  align-items: center;/*교차축 맞춤*/
+  
+}
+#side-drawer li {
+  margin: 1rem 0;
+}
+
+#side-drawer a {
+  color: rgb(253,239,213);
+  /* font-size: 2rem; */
+}
+
+
+main h1 {
+  text-align: center;
+  color: rgb(238, 164, 80);
+  font-size: 3rem;
+}
+#latest-products {
+  width: 80%;
+  margin: 2rem auto;
+}
+#latest-products ul {
+  display: grid; /*그리드*/
+  grid-template-columns: 1fr 1fr; /*각각의 열에 비율지정*/
+  gap: 1rem; /*그리드열에 간격추가*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.food-item {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden; /*한면만 둥글해졌을때 양면 전부 고치는명령어*/
+}
+.food-item img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover; /*크기와 넓비를 맞추기*/
+}
+.food-item-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+  /* font-size: 200%;폰트사이즈는 부모폰트사이즈를 따라간다 */
+  /* font-size: 2em; 1em == 100% 와 같다  */
+  /* font-size: 2rem; rem은 HTML요소에 맞춰서 사이즈 변경 */
+  /*-rem :만약 HTML요소의 폰트사이즈가 설정안된경우 페이지의 "폰트사이즈"를 따라간다*/
+  /* font-size: 2rem;em과rem은 부모 또는 최상위요소의 폰트사이즈를 따라감 */
+.food-item h2 {
+  margin: 0 0 1rem 0;
+}
+
+.btn {
+  background-color: rgb(228, 157, 44);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+}
+.btn:hover {
+  background-color: rgb(221, 134, 34);
+}
+@media (max-width: 48rem) {/*모바일만큼 화면이 작아질때 반응하여 사용*/
+  #main-header nav { /*768/16=48*/
+    display: none; /*nav를 768픽셀보다 낮으면 안보이게함*/
+  }
+  .menu-btn {
+    display: flex;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  #latest-products ul {/*css의 종속성질 포함*/
+    grid-template-columns: 100%; /*그리드 비율*/
+  }
+}
+/*poisition속성 요소기본위치변경*/
